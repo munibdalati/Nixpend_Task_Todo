@@ -1,0 +1,33 @@
+[
+    {
+      "userId": 1,
+      "id": 1,
+      "title": "Math",
+      "description": "This a description",
+      "subtasks": "this is a sub task",
+      "progressBar": "this is a progress bar",
+      "status": "todo",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 2,
+      "title": "science",
+      "description": "This a description",
+      "subtasks": "this is a sub task",
+      "progressBar": "this is a progress bar",
+      "status": "todo",
+      "completed": false
+    },
+    {
+      "userId": 1,
+      "id": 3,
+      "title": "sports",
+      "description": "This a description",
+      "subtasks": "this is a sub task",
+      "progressBar": "this is a progress bar",
+      "status": "todo",
+      "completed": false
+    }
+
+  ]

@@ -1,0 +1,10 @@
+.task__container {
+  border-radius: 10px;
+  padding: 8px;
+  color: #000;
+  margin-bottom: 8px;
+  min-height: 90px;
+  margin-left: 10px;
+  margin-right: 10px;
+  cursor: pointer;
+}

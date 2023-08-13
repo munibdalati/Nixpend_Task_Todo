@@ -1,0 +1,43 @@
+.column {
+  background-color: #f4f5f7;
+  border-radius: 10px;
+  width: 300px;
+  max-height: 550px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  border: 1px solid gray;
+  margin-right: 20px;
+
+
+}
+.column-content {
+
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  
+}
+
+.column-title {
+  padding: 8px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: pink;
+  text-align: center;
+}
+
+
+
+.column-taskList {
+  padding: 3px;
+  background-color: #f4f5f7;
+  transition: lightblue 0.2s ease;
+  flex-grow: 1;
+}
+
+.column__addcardbtn{
+  margin: 10px;
+}
