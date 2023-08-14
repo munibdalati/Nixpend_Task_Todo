@@ -12,9 +12,9 @@ export default function Column({ title, tasks, id, taskCount }) {
       {/* Column title */}
       <div className="column-title d-flex justify-content-between pt-3 px-3">
         <h4 className="">{title}</h4>
-        <h6 className="border px-3 py-2 rounded-circle bg-success text-white">{taskCount}</h6>
-
-
+        <h6 className="border px-3 py-2 rounded-circle bg-success text-white">
+          {taskCount}
+        </h6>
       </div>
 
       {/* Column content */}

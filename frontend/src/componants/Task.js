@@ -51,6 +51,7 @@ function Task({ task, index }) {
           {/* descrption */}
           <div className="mt-2">{task.description}</div>
 
+
           <div className="d-flex justify-content-end">
             {/* Edit button */}
             <Link to={`/edittodo/${task._id}`} className="text-decoration-none">

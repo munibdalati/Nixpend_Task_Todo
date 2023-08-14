@@ -91,7 +91,7 @@ function KanbanBoard() {
       <h2 className="text-center py-4">Progress Board</h2>
       <div className="d-flex justify-content-center align-items-start">
         {/* Columns */}
-        <div className="d-flex justify-content-center align-items-start">
+        <div className="d-flex justify-content-center align-items-start flex-wrap">
           <Column
             title={"To-do"}
             tasks={incomplete}
