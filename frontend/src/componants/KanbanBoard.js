@@ -34,9 +34,9 @@ function KanbanBoard() {
   }, []);
 
   console.log(data);
-  console.log(incomplete.length);
-  console.log(doing.length);
-  console.log(completed.length);
+  console.log(incomplete);
+  console.log(doing);
+  console.log(completed);
 
   // destination:  is where tasks are going to
   // source:  is where tasks come from
@@ -75,6 +75,8 @@ function KanbanBoard() {
     } else {
       setIncomplete([{ ...task, status: 1 }, ...incomplete]);
     }
+
+
   };
 
   //definition functions

@@ -50,21 +50,6 @@ function EditToDo(task) {
       .catch((err) => console.log(err));
   };
 
-  const deleteTodo = async (_id, title) => {
-    if (window.confirm(`Are you sure you want to delete ${title}`)) {
-      try {
-        const response = await axios.delete("/api/todo/deletetodo/" + id, {
-          data: { todoId: _id },
-        });
-        if (response.data.status === "ok") {
-          navigate("/"); 
-        }
-      } catch (error) {
-        console.log(error);
-      }
-    }
-  };
-
   return (
     <Container className="d-flex justify-content-center align-items-center pt-5">
       <Form className="w-50" onSubmit={UpdateTodo}>
@@ -119,9 +104,7 @@ function EditToDo(task) {
           <Button variant="success" type="submit">
             Submit Changes
           </Button>{" "}
-          <Button variant="warning"  className="" onClick={() => deleteTodo(task._id, task.title)}>
-            Delete Todo
-          </Button>{" "}
+
         </div>
       </Form>
     </Container>
