@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
@@ -8,13 +8,11 @@ import { useNavigate } from "react-router-dom";
 import "../css/AddToDo.css";
 
 function AddTodo() {
-
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [progressValue, setProgressValue] = useState(0); // Initial progress value
+  const [progressValue, setProgressValue] = useState(0); // Initial progress value = 0
   const [status, setStatus] = useState("todo");
   const [error, setError] = useState("");
-
 
   const navigate = useNavigate();
 
@@ -26,18 +24,18 @@ function AddTodo() {
       },
     };
     try {
+      //posting new todo to the database
       await axios.post(
         "/api/todo/createtodo",
         { title, description, progressBar: progressValue, status },
         config
       );
-      console.log("Form submission successful")
+      console.log("Form submission successful");
       navigate("/");
     } catch (error) {
       console.log(error.response);
       setError(error.response.data.error);
     }
-
   };
 
   return (
@@ -54,6 +52,7 @@ function AddTodo() {
             onChange={(e) => setTitle(e.target.value)}
           />
         </Form.Group>
+
         {/* Description */}
         <Form.Group controlId="taskDescription" className="mb-4">
           <Form.Label>Description:</Form.Label>
@@ -91,11 +90,10 @@ function AddTodo() {
           <option value="3">done</option>
         </Form.Select>
         <div class="d-flex justify-content-center align-items-center mt-4">
-        <Button variant="success" type="submit" className="">
-          Add
-        </Button>{" "}
+          <Button variant="success" type="submit" className="">
+            Add
+          </Button>{" "}
         </div>
-        
       </Form>
     </Container>
   );

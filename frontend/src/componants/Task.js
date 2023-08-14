@@ -11,12 +11,10 @@ const Container = styled.div`
 `;
 //Control the color of task when dragging it
 function bgcolorChange(props) {
-  return props.isdragging
-    ? "lightgreen"
-    : "#fffada";
+  return props.isdragging ? "lightgreen" : "#fffada";
 }
- function Task({ task, index }) {
 
+function Task({ task, index }) {
   //deleting the task
   const deleteTodo = async (id, title) => {
     if (window.confirm(`Are you sure you want to delete ${title}`)) {
